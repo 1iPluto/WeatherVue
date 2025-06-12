@@ -44,4 +44,4 @@ const App = {
         }
     }
 };
-document.addEventListener('DOMContentLoaded', App.init); 
+document.addEventListener('DOMContentLoaded', App.init); // Additional documentation
