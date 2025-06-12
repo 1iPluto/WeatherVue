@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced Weather Application with real-time weather data">
+    <meta name="keywords" content="weather, forecast, temperature, humidity, wind speed">
+    <meta name="author" content="Your Name">
+    <title>WeatherVue | Real-time Weather App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>WeatherVue</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="city-input" 
+                        placeholder="Search for a city..." 
+                        aria-label="Enter city name"
+                    >
+                    <button id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="recent-searches" id="recent-searches">
+                    <!-- Recent searches will be populated here -->
+                </div>
+            </section>
+
+            <section class="weather-section" id="weather-section">
+                <!-- Weather data will be displayed here -->
+                <div class="weather-card hidden" id="weather-card">
+                    <div class="weather-header">
+                        <div class="location-info">
+                            <h2 id="city">--</h2>
+                            <p id="date-time">--</p>
+                        </div>
+                        <div class="weather-icon-container">
+                            <img src="" alt="Weather Icon" id="weather-icon" class="weather-icon">
+                        </div>
+                    </div>
+                    
+                    <div class="weather-body">
+                        <div class="temperature-container">
+                            <h3 id="temperature">--°</h3>
+                            <p id="feels-like">Feels like: --°</p>
+                        </div>
+                        
+                        <div class="weather-description">
+                            <p id="description">--</p>
+                        </div>
+                        
+                        <div class="weather-details-grid">
+                            <div class="weather-detail-item">
+                                <i class="fas fa-tint"></i>
+                                <div class="detail-info">
+                                    <span class="detail-label">Humidity</span>
+                                    <span class="detail-value" id="humidity">--%</span>
+                                </div>
+                            </div>
+                            <div class="weather-detail-item">
+                                <i class="fas fa-wind"></i>
+                                <div class="detail-info">
+                                    <span class="detail-label">Wind Speed</span>
+                                    <span class="detail-value" id="wind-speed">-- km/h</span>
+                                </div>
+                            </div>
+                            <div class="weather-detail-item">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                                <div class="detail-info">
+                                    <span class="detail-label">Pressure</span>
+                                    <span class="detail-value" id="pressure">-- hPa</span>
+                                </div>
+                            </div>
+                            <div class="weather-detail-item">
+                                <i class="fas fa-eye"></i>
+                                <div class="detail-info">
+                                    <span class="detail-label">Visibility</span>
+                                    <span class="detail-value" id="visibility">-- km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sunrise-sunset">
+                        <div class="sun-item">
+                            <i class="fas fa-sunrise"></i>
+                            <div class="sun-info">
+                                <span class="sun-label">Sunrise</span>
+                                <span class="sun-time" id="sunrise">--:--</span>
+                            </div>
+                        </div>
+                        <div class="sun-item">
+                            <i class="fas fa-sunset"></i>
+                            <div class="sun-info">
+                                <span class="sun-label">Sunset</span>
+                                <span class="sun-time" id="sunset">--:--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading-indicator hidden" id="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Fetching weather data...</p>
+                </div>
+
+                <div class="error-container hidden" id="error-container">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="error-message">Unable to fetch weather data</p>
+                </div>
+
+                <div class="initial-state" id="initial-state">
+                    <i class="fas fa-cloud-sun-rain"></i>
+                    <p>Search for a city to see the weather</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Created by <a href="https://www.linkedin.com/in/marwan-saeed-73a557224/" target="_blank" rel="noopener noreferrer">Marwan Saeed</a> | <a href="https://github.com/1iPluto/WeatherVue" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> | Powered by <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeather API</a></p>
+        </footer>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
