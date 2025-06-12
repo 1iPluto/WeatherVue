@@ -1,5 +1,5 @@
 const CONFIG = {
-    API_KEY: '67be162fdc308ec6c85869e3ac633f20',
+    API_KEY: 'YOUR_OPENWEATHERMAP_API_KEY',
     BASE_URL: 'https://api.openweathermap.org/data/2.5',
     ICON_URL: 'https://openweathermap.org/img/wn/',
     UNITS: 'metric',
