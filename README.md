@@ -13,6 +13,12 @@
   A modern, responsive weather application built with vanilla JavaScript that provides real-time weather information for any city worldwide.
 </p>
 
+<div align="center">
+  <a href="https://1ipluto.github.io/WeatherVue/" target="_blank">
+    <img src="https://img.shields.io/badge/View_Demo-Live_Site-blue?style=for-the-badge" alt="View Demo">
+  </a>
+</div>
+
 ## ✨ Features
 
 - **🌍 Real-time Weather Data** - Current conditions for any city worldwide

@@ -442,6 +442,29 @@ body {
     color: var(--secondary-color);
 }
 
+/* Demo Banner */
+.demo-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    z-index: 1000;
+}
+
+.demo-banner a {
+    color: white;
+    text-decoration: underline;
+}
+
+body.has-demo-banner .app-container {
+    padding-top: 2.5rem;
+}
+
 /* Utility Classes */
 .hidden {
     display: none !important;
